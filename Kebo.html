@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Kebo Hill</title>
+    <style>
+        /* Animasi slide-up */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px); /* Mulai dari bawah */
+                opacity: 0; /* Mulai tidak terlihat */
+            }
+            100% {
+                transform: translateY(0); /* Berhenti di posisi normal */
+                opacity: 1; /* Menjadi terlihat */
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('cover_bg_1.jpg'); /* Menambahkan gambar background */
+            background-size: cover; /* Menyesuaikan ukuran gambar agar mencakup seluruh halaman */
+            background-position: center; /* Memusatkan gambar */
+            background-attachment: fixed; /* Membuat gambar tetap saat scroll */
+            color: white; /* Warna teks default */
+        }
+
+        /* Mengatur body untuk memastikan halaman penuh */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #221d1d;
+            opacity: 0;
+            transform: translateY(50px); /* Mulai dari bawah */
+            animation: slideUp 1.5s ease-out forwards; /* Animasi slide-up selama 1.5 detik */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #575555ed;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.501);
+            width: 80%;
+            max-width: 1000px;
+            margin-bottom: 20px; /* Memberi jarak antara konten utama dan kolom komentar */
+        }
+
+        .image-section {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.001);
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.456);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 20px; /* Memberi jarak antara gambar dan teks */
+        }
+
+        .text-section h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .back-button {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #0bcd42;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .back-button a:hover {
+            background-color: #212326;
+        }
+
+        .location-button {
+            background-color: #007BFF;
+        }
+
+        /* Komentar Section */
+        .comment-section {
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+            background-color: #9e9c9c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Memberi jarak antara konten utama dan kolom komentar */
+        }
+
+        .comment-section h3 {
+            margin-top: 0;
+        }
+
+        .comment-form {
+            margin-bottom: 20px;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .comment-form button {
+            background-color: #0bcd42;
+            color: white;
+            padding: 10px 20px;
+            border: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #212326;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment-item {
+            background-color: #767474;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-item h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .comment-item p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-section,
+            .text-section {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .comment-section {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Gambar -->
+        <div class="image-section">
+            <img src="Kebo.png" alt="Gambar Balikpapan">
+        </div>
+
+        <!-- Bagian Teks Penjelasan -->
+        <div class="text-section">
+            <h2>About Kebo Hill / Bukit Kebo</h2>
+            <p>Bukit Kebo is a iconic hill located in Balikpapan, East Kalimantan, offering stunning panoramic views of the city and coastline. Known for its peaceful atmosphere, it is a popular destination for locals seeking a quiet escape and nature enthusiasts looking for a refreshing outdoor experience.</p>
+            <p>The hill’s vantage point makes it an ideal spot for photography, especially during sunrise or sunset, when the sky paints the landscape in beautiful hues.Bukit Kebo is relatively easy to reach, with a short but steep hike leading visitors to the top. It is a hidden gem in Balikpapan, perfect for those looking to unwind and enjoy the natural beauty of the city from above.</p>
+            
+            <!-- Tombol Back dan Location -->
+            <div class="back-button">
+                <a href="https://www.google.com/maps/place/Bukit+Kebo+Km+8/@-1.1953959,116.9315137,367m/data=!3m1!1e3!4m6!3m5!1s0x2df14f18a4761d75:0x296da5398c550e11!8m2!3d-1.1958217!4d116.9314673!16s%2Fg%2F11m7slry8m?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="location-button">Location</a>
+                <a href="index.html">Back to Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Komentar -->
+    <div class="comment-section">
+        <h3>Comment About This Place</h3>
+        <form class="comment-form" id="commentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Write Your Comment..." rows="4" required></textarea>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button type="submit">Submit Comment</button>
+        </form>
+
+        <div class="comments" id="commentsContainer">
+            <!-- Komentar akan ditambahkan di sini -->
+        </div>
+    </div>
+
+    <script>
+        // Mengambil elemen-elemen dari DOM
+        const commentForm = document.getElementById("commentForm");
+        const commentsContainer = document.getElementById("commentsContainer");
+        const nameInput = document.getElementById("name");
+        const commentInput = document.getElementById("comment");
+        const ratingInput = document.getElementById("rating");
+
+        // Event listener untuk form submit
+        commentForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Mendapatkan nilai nama, komentar, dan rating
+            const name = nameInput.value.trim();
+            const comment = commentInput.value.trim();
+            const rating = ratingInput.value;
+
+            // Validasi input
+            if (!name || !comment || !rating) {
+                alert("All fields are required!");
+                return;
+            }
+
+            // Membuat elemen komentar baru
+            const commentItem = document.createElement("div");
+            commentItem.classList.add("comment-item");
+
+            const commentName = document.createElement("h4");
+            commentName.textContent = name;
+
+            const commentText = document.createElement("p");
+            commentText.textContent = comment;
+
+            const commentRating = document.createElement("p");
+            commentRating.classList.add("rating");
+            commentRating.textContent = `Rating: ${rating}/5`;
+
+            // Menambahkan elemen ke dalam container
+            commentItem.appendChild(commentName);
+            commentItem.appendChild(commentText);
+            commentItem.appendChild(commentRating);
+            commentsContainer.appendChild(commentItem);
+
+            // Reset form
+            nameInput.value = "";
+            commentInput.value = "";
+            ratingInput.value = "";
+        });
+    </script>
+
+</body>
+</html>
