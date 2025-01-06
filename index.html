@@ -9,7 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Asmara &mdash; Balikpapan Tour&Information</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="description" content="Created by Asmarafi Dwi Putra" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
@@ -76,6 +76,12 @@
 						<h1 id="fh5co-logo"><a href="index.html">balikpapan tour & Information</a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
+
+							<div></div>
+							<div id="user-info">
+								Welcome, <span id="user-email">Guest Users</span>
+							</div>
+							
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
 									<a href="index.html">Home</a>
@@ -87,6 +93,8 @@
 										<li><a href="listing.html" target="_blank">Other Place</a></li>
 										<li><a href="#news" target="_blank">News</a></li>
 										<li><a href="contact.html" target="_blank">Contact	</a></li>
+										<li><a href="login.html" target="_blank">Log In	</a></li>
+
 
 									</ul>
 								</li>
@@ -294,7 +302,16 @@
 			});
 		});
 	</script>
-	
+		
+	<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const userEmail = localStorage.getItem("userEmail");
+        const userInfo = document.getElementById("user-email");
+        if (userInfo) {
+            userInfo.textContent = userEmail ? userEmail : "Guest Users";
+        }
+    });
+</script>	
 
 	</body>
 </html>
